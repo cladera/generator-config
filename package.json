@@ -1,6 +1,6 @@
 {
   "name": "generator-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Environment configuration generator for node applications",
   "license": "MIT",
   "main": "app/index.js",

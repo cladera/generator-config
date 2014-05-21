@@ -2,6 +2,8 @@
 
 Yeoman generator for creating simple environment configuration for NodeJS applications.
 
+This project was inspired and actually extracted from the excellent work of @DaftMonk in [generator-angular-fullstack](https://github.com/DaftMonk/generator-angular-fullstack)
+
 ## Usage
 
 Install generator:
