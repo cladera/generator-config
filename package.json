@@ -1,7 +1,7 @@
 {
   "name": "generator-config",
   "version": "1.0.0",
-  "description": "Yeoman generator",
+  "description": "Environment configuration generator for node applications",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "cladera/generator-config",
