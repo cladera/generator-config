@@ -20,13 +20,12 @@ describe('config generator', function () {
   it('creates expected files', function (done) {
     var expected = [
       // add files you expect to exist here.
-      '.jshintrc',
-      '.editorconfig'
+      'config/index.js',
+      'config/env/all.js',
+      'config/env/development.js',
+      'config/env/test.js',
+      'config/env/production.js'
     ];
-
-    helpers.mockPrompt(this.app, {
-      'someOption': true
-    });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFile(expected);

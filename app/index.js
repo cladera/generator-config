@@ -9,45 +9,26 @@ var chalk = require('chalk');
 var ConfigGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = require('../package.json');
-
-    this.on('end', function () {
-      if (!this.options['skip-install']) {
-        this.installDependencies();
-      }
-    });
   },
 
   askFor: function () {
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Config generator!'));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
+    this.log(yosay('Welcome to Config generator!'));
+    this.log('Remember to install underscore: npm install underscore --save');
+    done();
   },
 
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
+    this.mkdir('config');
+    this.mkdir('config/env');
 
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
-  },
-
-  projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
+    this.copy('_index.js', 'config/index.js');
+    this.copy('_all.js', 'config/env/all.js');
+    this.copy('_development.js', 'config/env/development.js');
+    this.copy('_test.js', 'config/env/test.js');
+    this.copy('_production.js', 'config/env/production.js');
   }
 });
 
