@@ -21,7 +21,7 @@ describe('config generator', function () {
     var expected = [
       // add files you expect to exist here.
       'config/index.js',
-      'config/env/all.js',
+      'config/all.js',
       'config/env/development.js',
       'config/env/test.js',
       'config/env/production.js'

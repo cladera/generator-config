@@ -25,7 +25,7 @@ var ConfigGenerator = yeoman.generators.Base.extend({
     this.mkdir('config/env');
 
     this.copy('_index.js', 'config/index.js');
-    this.copy('_all.js', 'config/env/all.js');
+    this.copy('_all.js', 'config/all.js');
     this.copy('_development.js', 'config/env/development.js');
     this.copy('_test.js', 'config/env/test.js');
     this.copy('_production.js', 'config/env/production.js');
